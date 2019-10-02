@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_large"
+        android:background="@android:color/white"
+        android:elevation="@dimen/card_view_elevation"
+        android:padding="@dimen/padding"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/card_view_corner_radius"
+        app:cardElevation="@dimen/card_view_elevation">
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_large">
+
+        <com.market.admin.utils.CircleImageView
+                android:id="@+id/item_profile_img"
+                android:layout_width="@dimen/item_feed_profile_size"
+                android:layout_height="@dimen/item_feed_profile_size"
+                android:src="@drawable/ic_placeholder" />
+
+        <TextView
+                android:layout_marginStart="@dimen/_10sdp"
+                android:id="@+id/item_title"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/item_profile_img"
+                android:text="karun Kumar" />
+
+        <TextView
+                android:layout_below="@+id/item_title"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:id="@+id/tv_date"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/item_profile_img"
+                android:text="12-12-2017 12-31-09"
+                tools:ignore="SmallSp" />
+
+        <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                tools:text="Pending"
+                android:textStyle="bold"/>
+
+
+        <TextView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/tv_category"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/ads_color2"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_profile_img"
+                android:drawableStart="@drawable/ic_circle"
+                android:text="Hotel" />
+
+
+        <RadioGroup
+                android:layout_marginTop="@dimen/_3sdp"
+                android:padding="@dimen/_1sdp"
+                android:id="@+id/rg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_category"
+                android:orientation="horizontal">
+
+            <RadioButton
+                    android:id="@+id/rb_pending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="15dp"
+                    android:text="Pending" />
+
+            <RadioButton
+                    android:id="@+id/rb_approve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="15dp"
+                    android:text="Approve" />
+
+            <RadioButton
+                    android:id="@+id/rb_reject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="15dp"
+                    android:text="Reject" />
+        </RadioGroup>
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>
